@@ -1,0 +1,33 @@
+.Button {
+    border-radius: 18px;
+    height: 36px;
+    padding: 0 24px;
+    background-color: transparent;
+    border: 1px solid;
+    transition: border-width 0.2s linear;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bold;
+    font-size: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Button:hover {
+    border-width: 2px;
+}
+
+.Button--green {
+    color: #55c2a7;
+    border-color: #55c2a7;
+}
+
+.Button--orange {
+    color: #c28642;
+    border-color: #c28642;
+}
+
+.Button--red {
+    color: #c26978;
+    border-color: #c26978;
+}

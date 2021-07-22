@@ -1,0 +1,16 @@
+.ProgressBar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 6px;
+    overflow: hidden;
+}
+
+.ProgressBar__background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 6px;
+    width: 100vw;
+    background: linear-gradient(90deg, #c28642 0%, #c26978 100%);
+}
