@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import '../styles/Button.css'
 
-const Button = ({ onClick, progress, setProgress }) => {
+const Button = ({ onClick, progress, setProgress, breakpointInputRef }) => {
     const [clicked, setClicked] = useState(false)
     const [isBolded, setIsBolded] = useState(false)
     return (
@@ -14,7 +14,12 @@ const Button = ({ onClick, progress, setProgress }) => {
                 setIsBolded(true)
                 setTimeout(() => setIsBolded(false), 350)
                 if (!clicked) {
-                    onClick(15000)
+                    onClick(
+                        15000,
+                        360,
+                        breakpointInputRef.current.value &&
+                            breakpointInputRef.current.value.split(',').sort()
+                    )
                     setClicked(true)
                 } else if (progress >= 100) {
                     setClicked(false)
